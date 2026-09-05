@@ -2,7 +2,7 @@
 // this is the only part of the file you need to edit!
 
 const quotes = [
-  { text: "the intersection of programming, design, and art", source: "Scott" },
+  { text: "An approach to programming computers in which the primary goal is to create an aesthetic or expressive experience", source: "The College of New Jersey" },
   { text: "a chance for code to be wrong", source: "Sara" },
   { text: "surprise, exploration, and aesthetic exploration", source: "Sally" },
   { text: "process over results", source: "Sam" },
