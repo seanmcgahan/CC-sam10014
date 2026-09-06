@@ -9,7 +9,8 @@ const quotes = [
   { text: "a method that uses computer programming for artistic expression. In this method, the goal is not predefined and the process is based on discovery, variation, and exploration of mostly unexpected results", source: "Tim Rodenbröcker" },
   { text: "a term we use to describe the computer programming software and people that make expressive art and design through code", source: "Maura Kelly" },
   { text: "the unexpected beauty of mathematical systems pushed to their limits", source: "wavgen.ca" },
-  { text: "the production of something that is expressive in nature rather than having a purely practical use", source: "Matt Crouch" }
+  { text: "the production of something that is expressive in nature rather than having a purely practical use", source: "Matt Crouch" },
+  { text: "a place where experience in the field of design, love of explorative creativity and skills as a programmer come together", source: "Patrik Huebner" }
 ];
 // no need to edit anything below this line! 
 // if you have made an error, you can check your history to see what might have gone wrong
