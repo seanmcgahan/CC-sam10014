@@ -6,7 +6,7 @@ const quotes = [
   { text: "Programming without strict pre-planning", source: "Joachim Rodriguez y Romero" },
   { text: "Programming with artistic purposes", source: "Mauricio Verano Merino, Juan Pablo Sáenz" },
   { text: "a new interdisciplinary art form that bridges the gap between technologists and artists", source: "Ahmad Moussa" },
-  { text: "a method that uses computer programming for artistic expression. In this method, the goal is not predefined and the process is based on discovery, variation, and exploration of mostly unexpected results", source: "Tim Rodenbröcker" },
+  { text: "a method that uses computer programming for artistic expression", source: "Tim Rodenbröcker" },
   { text: "a term we use to describe the computer programming software and people that make expressive art and design through code", source: "Maura Kelly" },
   { text: "the unexpected beauty of mathematical systems pushed to their limits", source: "wavgen.ca" },
   { text: "the production of something that is expressive in nature rather than having a purely practical use", source: "Matt Crouch" },
