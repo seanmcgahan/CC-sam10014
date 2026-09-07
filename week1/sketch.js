@@ -2,15 +2,15 @@
 // this is the only part of the file you need to edit!
 
 const quotes = [
-  { text: "An approach to programming computers in which the primary goal is to create an aesthetic or expressive experience", source: "The College of New Jersey" },
+  { text: "fusion of digital technical skill and artistic expression", source: "Southern Methodist University" },
   { text: "Programming without strict pre-planning", source: "Joachim Rodriguez y Romero" },
   { text: "Programming with artistic purposes", source: "Mauricio Verano Merino, Juan Pablo Sáenz" },
   { text: "a new interdisciplinary art form that bridges the gap between technologists and artists", source: "Ahmad Moussa" },
   { text: "a method that uses computer programming for artistic expression", source: "Tim Rodenbröcker" },
-  { text: "a term we use to describe the computer programming software and people that make expressive art and design through code", source: "Maura Kelly" },
+  { text: "the computer programming software and people that make expressive art and design through code", source: "Maura Kelly" },
   { text: "the unexpected beauty of mathematical systems pushed to their limits", source: "wavgen.ca" },
   { text: "the production of something that is expressive in nature rather than having a purely practical use", source: "Matt Crouch" },
-  { text: "a place where experience in the field of design, love of explorative creativity and skills as a programmer come together", source: "Patrik Huebner" }
+  { text: "computational algorithms as a tool to create beautifully designed visual graphics", source: "Queens College" }
 ];
 // no need to edit anything below this line! 
 // if you have made an error, you can check your history to see what might have gone wrong
