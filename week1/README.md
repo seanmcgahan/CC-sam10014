@@ -7,5 +7,3 @@ I have very little coding experience right now, but becoming better at this skil
 This semester I am excited in general to get more familiar with the syntax of coding. In my limited experience, this is something that I’ve found pretty difficult and intimidating to get the hang of. Knowing how to write what I want to write without having to refer to any guides will help me have more creative freedom and flow when I am coding.  
 
 ---
-
-This is a README file that can be used to describe and document your assignment.
