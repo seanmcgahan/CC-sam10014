@@ -23,5 +23,8 @@ function draw() {
     rectMode(CENTER);
     rect(0, 0, 350, 350);
     pop();
-    
 }
+
+function mousePressed() {
+    background(0, 100, 100);
+} 
