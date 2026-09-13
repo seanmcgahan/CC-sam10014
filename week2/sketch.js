@@ -9,26 +9,109 @@ function setup() {
 }
 
 function draw() {
-    strokeWeight(5);
-    stroke(300,70,100);
-    triangle(50, 750, 50, 540, 260, 750);
-    push();
-    strokeWeight(10);
-    stroke(90, 50, 100);
-    line(0, 400, 400, 800);
-    pop();
-    push();
-    translate(400, 400);
-    rotate(45);
-    stroke(0, 0, 100);
-    fill(300, 70, 100);
-    rectMode(CENTER);
-    rect(0, 0, 350, 350);
-    pop();
-    noloop();
+    if (clickCount === 0) {
+        strokeWeight(5);
+        stroke(300,70,100);
+        triangle(50, 750, 50, 540, 260, 750);
+        push();
+        strokeWeight(10);
+        stroke(90, 50, 100);
+        line(0, 400, 400, 800);
+        pop();
+        push();
+        translate(400, 400);
+        rotate(45);
+        stroke(0, 0, 100);
+        fill(300, 70, 100);
+        rectMode(CENTER);
+        rect(0, 0, 350, 350);
+        pop();
+        } else if (clickCount === 1) {
+            background(120, 55, 50);
+            strokeWeight(5);
+            stroke(120,50,90);
+            fill(120, 70, 30);
+            triangle(50, 750, 50, 120, 680, 750);
+            push();
+            strokeWeight(10);
+            stroke(120, 40, 100);
+            line(0, 0, 800, 800);
+            pop();
+            push();
+            translate(400, 400);
+            rotate(45);
+            stroke(120, 100, 100);
+            fill(120, 70, 65);
+            rectMode(CENTER);
+            rect(0, -230, 350, 350);
+            pop();
+        } else if (clickCount === 2) {
+            background(40, 100, 100);
+            strokeWeight(5);
+            stroke(40, 50, 90);
+            fill(40, 70, 30);
+            triangle(750, 50, 120, 50, 750, 680);
+            push();
+            strokeWeight(10);
+            stroke(40, 40, 100);
+            line(0, 800, 800, 0);
+            pop();
+            push();
+            translate(400, 400);
+            rotate(45);
+            stroke(40, 70, 30);
+            fill(40, 70, 65);
+            rectMode(CENTER);
+            rect(0, 230, 250, -250);
+            pop();
+        } else if (clickCount === 3) {
+            background(0, 0, 50); 
+            push();
+            strokeWeight(5);
+            stroke(0, 0, 70);
+            fill(0, 0, 30);
+            triangle(750, 400, 450, 700, 450, 100);
+            pop();
+            push();
+            strokeWeight(10);
+            stroke(0 , 0, 0);
+            line(400, 800, 400, 0);
+            pop();
+            push();
+            translate(200, 400); //used origin to move the rectangle here instead of changing corrdinates of rectangle command
+            rotate(45);
+            stroke(0, 0, 30);
+            fill(0, 0, 85);
+            rectMode(CENTER);
+            rect(0, 0, 250, -250);
+            pop();
+        } else if (clickCount === 4) {
+            background(290, 40, 70);
+            push();
+            strokeWeight(5);
+            stroke(290,60, 30);
+            fill(290, 30, 90);
+            triangle(50, 400, 450, 800, 450, 0);
+            pop();
+            push();
+            strokeWeight(10);
+            stroke(0 , 0, 100);
+            line(600, 800, 600, 0);
+            pop();
+            push();
+            translate(200, 400); //used origin to move the rectangle here instead of changing corrdinates of rectangle command
+            rotate(45);
+            stroke(0, 0, 100);
+            fill(290, 60, 30);
+            rectMode(CENTER);
+            rect(0, 0, 150, -150);
+            pop();
+        }
+        
 }
 
-function mousePressed() {
+
+function mousePressed() {  // old code, not using currently need to delete
    if (clickCount === 0) {
         background(120, 55, 50);
         strokeWeight(5);
@@ -54,4 +137,8 @@ function mousePressed() {
         background(0, 0, 100);
         noloop();
         }
+}
+
+function mousePressed() {
+    clickCount++;
 }
