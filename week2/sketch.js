@@ -11,18 +11,18 @@ function setup() {
 function draw() {
     if (clickCount === 0) {
         strokeWeight(5);
-        stroke(300,70,100);
+        stroke(210,40,100);
         triangle(50, 750, 50, 540, 260, 750);
         push();
         strokeWeight(10);
-        stroke(90, 50, 100);
+        stroke(210, 100, 50);
         line(0, 400, 400, 800);
         pop();
         push();
         translate(400, 400);
         rotate(45);
         stroke(0, 0, 100);
-        fill(300, 70, 100);
+        fill(210, 55, 100);
         rectMode(CENTER);
         rect(0, 0, 350, 350);
         pop();
@@ -78,7 +78,7 @@ function draw() {
             line(400, 800, 400, 0);
             pop();
             push();
-            translate(200, 400); //used origin to move the rectangle here instead of changing corrdinates of rectangle command
+            translate(200, 400); //translated origin to move the rectangle here before rotating to make positioning easier
             rotate(45);
             stroke(0, 0, 30);
             fill(0, 0, 85);
@@ -99,12 +99,33 @@ function draw() {
             line(600, 800, 600, 0);
             pop();
             push();
-            translate(200, 400); //used origin to move the rectangle here instead of changing corrdinates of rectangle command
+            translate(200, 400); 
             rotate(45);
             stroke(0, 0, 100);
             fill(290, 60, 30);
             rectMode(CENTER);
             rect(0, 0, 150, -150);
+            pop();
+        } else if (clickCount === 5) {
+            background(0, 50, 100);
+            push();
+            strokeWeight(5);
+            stroke(0, 0, 100);
+            fill(0, 30, 100);
+            triangle (400, 800, 50, 450, 750, 450);
+            pop();
+            push();
+            strokeWeight(10);
+            stroke(0 , 0, 100);
+            line(0, 400, 800, 400);
+            pop();
+            push();
+            translate(400, 400); //moved origin back to center of canvas
+            rotate(0);
+            stroke(0, 0, 100);
+            fill(0, 30, 100);
+            rectMode(CENTER);
+            rect(0, -200, 300, -300);
             pop();
         }
         
