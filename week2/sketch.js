@@ -1,4 +1,4 @@
-let clickCount; // found this command in the "interactions" section of this weeks "review" page
+let clickCount; // found this command in the "interactions" page in the review section for week 2
 
 function setup() {
     createCanvas(800, 800);
@@ -9,7 +9,7 @@ function setup() {
 }
 
 function draw() {
-    if (clickCount === 0) {
+    if (clickCount === 0) { // learned about "if" statements and their syntax on the p5.js library page
         strokeWeight(5);
         stroke(210,40,100);
         triangle(50, 750, 50, 540, 260, 750);
@@ -26,7 +26,7 @@ function draw() {
         rectMode(CENTER);
         rect(0, 0, 350, 350);
         pop();
-        } else if (clickCount === 1) {
+        } else if (clickCount === 1) { // learned how to get if/else if to work through reading p5.js library and some trial and error
             background(120, 55, 50);
             strokeWeight(5);
             stroke(120,50,90);
@@ -132,7 +132,7 @@ function draw() {
 }
 
 
-function mousePressed() {  // old code, not using currently need to delete
+function mousePressed() {  // old code, was working at first but failed as I needed more drawings. not using currently need to delete
    if (clickCount === 0) {
         background(120, 55, 50);
         strokeWeight(5);
@@ -161,5 +161,5 @@ function mousePressed() {  // old code, not using currently need to delete
 }
 
 function mousePressed() {
-    clickCount++;
+    clickCount += 1; // found this command under "interactions" in the review section for week 2. Using it to add 1 click to the clickcount
 }
