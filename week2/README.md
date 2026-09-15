@@ -9,6 +9,10 @@ I wanted to keep my first variation simple enough with the transformations. I wa
 By having the square using the rotation(45) command, it was easy to get it to move where I wanted it to, as this only required me to move the coodinated of the position resulting in it moving in the diagonal direction I wanted it to.
 
 ## Variation 2
+I introduced some rotations in this one. I was able to recreate the positioning of my drawing almost exactly, but I achieved this in a different way than I thought I would. Due to the order of operations, I was having some trouble getting the rotations to work correct. However since I was using hard-coded coordinates, I was able to just invert these. I flipped the x and y of each point of the triangle and swapped the y coordinates of the points of the line. These both worked exactly to move the shapes to their new positions. 
+
+One thing I did not account for in my drawing was the layering of shapes on top of each other. In the drawing, you can see the line underneath the square and the triangle, but due to my order of shapes in the code, (Triangle first, then line, then square) the square is covering the line in my final image.
+
 
 ## Getting Started
 
