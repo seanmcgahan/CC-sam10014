@@ -132,34 +132,6 @@ function draw() {
 }
 
 
-function mousePressed() {  // old code, was working at first but failed as I needed more drawings. not using currently need to delete
-   if (clickCount === 0) {
-        background(120, 55, 50);
-        strokeWeight(5);
-        stroke(120,50,90);
-        fill(120, 70, 30);
-        triangle(50, 750, 50, 120, 680, 750);
-        push();
-        strokeWeight(10);
-        stroke(120, 40, 100);
-        line(0, 0, 800, 800);
-        pop();
-        push();
-        translate(400, 400);
-        rotate(45);
-        stroke(120, 100, 100);
-        fill(120, 70, 65);
-        rectMode(CENTER);
-        rect(0, -230, 350, 350);
-        pop();
-        noloop();
-        } 
-    if (clickCount === 1) {
-        background(0, 0, 100);
-        noloop();
-        }
-}
-
 function mousePressed() {
     clickCount += 1; // found this command under "interactions" in the review section for week 2. Using it to add 1 click to the clickcount
 }
