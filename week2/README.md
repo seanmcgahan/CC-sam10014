@@ -21,7 +21,10 @@ Since I wanted the square to be positioned in the center of the y axis and on th
 I originally was trying to position it using the coordinates of the square, but found this very difficult as the x and y coordinates where shifted 45 degrees already. Figuring out how to get around this helped me better understand how the rotate command works and what it is doing to the shapes in my sketch.
 
 ## Variation 4
-I used the same strategy to rotate the triangle 180 degrees. The triangle got a whole new set of coordinates that kept the same proportions but gave it a rotation to its new spot. I used the 
+I used the same strategy to rotate the triangle 180 degrees. The triangle got a whole new set of coordinates that kept the same proportions but gave it a rotation to its new spot. I used the x and y scale parts of the rect command to scale the square down and keep it in the same spot. 
+
+## Variation 5
+Here I used the rotation function to get the square rotated back to 0 degrees. However, I moved the origin of the square back to (400, 400) to make the positioning of it more straight forward. The triangle and line were repositioned/resized using the hardcoded coordinates
 
 
 ## Getting Started

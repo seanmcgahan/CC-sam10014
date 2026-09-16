@@ -66,7 +66,7 @@ function draw() {
             pop();
         } else if (clickCount === 3) {
             background(0, 0, 50); 
-            push();
+            push(); // added push and pop to triangle here
             strokeWeight(5);
             stroke(0, 0, 70);
             fill(0, 0, 30);
