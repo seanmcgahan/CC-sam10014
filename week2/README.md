@@ -26,27 +26,3 @@ I used the same strategy to rotate the triangle 180 degrees. The triangle got a 
 ## Variation 5
 Here I used the rotation function to get the square rotated back to 0 degrees. However, I moved the origin of the square back to (400, 400) to make the positioning of it more straight forward. The triangle and line were repositioned/resized using the hardcoded coordinates.
 
-
-## Getting Started
-
-Open `index.html` in your web browser and start editing `sketch.js`.
-
-## Running Locally
-
-For projects with media files, use a local server:
-
-```bash
-# Using Python
-python -m http.server 8000
-
-# Using Node.js
-npx http-server
-
-# Using VS Code Live Server extension
-# Right-click index.html -> "Open with Live Server"
-```
-
-## Resources
-
-- [p5.js 2.0](https://beta.p5js.org/)
-- [p5.js Reference](https://p5js.org/reference/)
