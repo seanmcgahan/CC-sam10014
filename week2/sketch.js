@@ -62,7 +62,7 @@ function draw() {
             stroke(40, 70, 30);
             fill(40, 70, 65);
             rectMode(CENTER);
-            rect(0, 230, 250, -250);
+            rect(0, 230, 250, 250);
             pop();
         } else if (clickCount === 3) {
             background(0, 0, 50); 

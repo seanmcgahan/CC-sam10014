@@ -13,6 +13,16 @@ I introduced some rotations in this one. I was able to recreate the positioning 
 
 One thing I did not account for in my drawing was the layering of shapes on top of each other. In the drawing, you can see the line underneath the square and the triangle, but due to my order of shapes in the code, (Triangle first, then line, then square) the square is covering the line in my final image.
 
+## Variation 3
+Once again, I used the positioning coordinates of both the triangle and the line to "rotate" them here to their new positions I made in my drawing for this variation. 
+
+Since I wanted the square to be positioned in the center of the y axis and on the left side of the canvas, I adjusted the translate command to move the origin. By setting the origin to (200, 400) rather than the previous (400, 400) allowed me to not have to deal with moving the square's x,y coordinates once rotated.
+
+I originally was trying to position it using the coordinates of the square, but found this very difficult as the x and y coordinates where shifted 45 degrees already. Figuring out how to get around this helped me better understand how the rotate command works and what it is doing to the shapes in my sketch.
+
+## Variation 4
+I used the same strategy to rotate the triangle 180 degrees. The triangle got a whole new set of coordinates that kept the same proportions but gave it a rotation to its new spot. I used the 
+
 
 ## Getting Started
 
