@@ -33,5 +33,7 @@ Through reading through the "review" section of week 2 on the course site, refer
 
 Originally I was trying to do this through a mousepressed function, so I'd have a new image show up when the mouse was pressed. Initially, I was able to get the first variation to show up by using a noloop function on the original draw function. However, I realized that this didn't work for adding a second, third, fourth, etc variation. This lead me to go back to the drawing board and re-evaluluate how I was going to get it to work.
 
-While I was able to get the clickcount variable and if statements to successfully work, I was not able to figure out how to get the intial drawing to appear again after the 5th variation. I beleive this would require some form of loop to the click counter and I was not sure how to set it up with my current knowledge of if statements and the clickcount variable. I would be curious to figure out how this works at some point however
+While I was able to get the clickcount variable and if statements to successfully work, I was not able to figure out how to get the intial drawing to appear again after the 5th variation. I beleive this would require some form of loop to the click counter and I was not sure how to set it up with my current knowledge of if statements and the clickcount variable. I would be curious to figure out how this works at some point however.
+
+In terms of color schemes, I found using HSB to be more intuitive and familiar since it is what I have seen in other design programs. I found that it also worked particularly well for the monochromatic color schemes I went with, as each variation was able to have its own set hue, with different saturation and brightness values for the shapes and background.
 
