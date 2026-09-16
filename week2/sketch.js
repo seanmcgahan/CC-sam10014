@@ -83,7 +83,7 @@ function draw() {
             stroke(0, 0, 30);
             fill(0, 0, 85);
             rectMode(CENTER);
-            rect(0, 0, 250, -250);
+            rect(0, 0, 250, 250);
             pop();
         } else if (clickCount === 4) {
             background(290, 40, 70);
@@ -104,7 +104,7 @@ function draw() {
             stroke(0, 0, 100);
             fill(290, 60, 30);
             rectMode(CENTER);
-            rect(0, 0, 150, -150);
+            rect(0, 0, 150, 150);
             pop();
         } else if (clickCount === 5) {
             background(0, 50, 100);
@@ -125,7 +125,7 @@ function draw() {
             stroke(0, 0, 100);
             fill(0, 30, 100);
             rectMode(CENTER);
-            rect(0, -200, 300, -300);
+            rect(0, -200, 300, 300);
             pop();
         }
         
