@@ -26,3 +26,12 @@ I used the same strategy to rotate the triangle 180 degrees. The triangle got a 
 ## Variation 5
 Here I used the rotation function to get the square rotated back to 0 degrees. However, I moved the origin of the square back to (400, 400) to make the positioning of it more straight forward. The triangle and line were repositioned/resized using the hardcoded coordinates.
 
+I also used the scale part of the rect command to once again scale the rectangle back up in size to about the size I drew it as.
+
+## Extra Notes/Thoughts
+Through reading through the "review" section of week 2 on the course site, referencing the p5.js library, some explanations of proper syntax from this week's LLM, and also a ton of trial and error, I was able to get each iteration/version of my drawing to show up with progressive clicks. This ultimately involved setting up a "let click count" variable at the top of my code, and then using "if" and "else if" statements throughout the draw function. I made note of where I used each of these in comments I added to the code. 
+
+Originally I was trying to do this through a mousepressed function, so have a new image show up when the mouse was pressed. Initially, I was able to get the first variation to show up by using a noloop function on the original draw function. However, I realized that this didn't work for adding a second, third, fourth, etc variation.
+
+While I was able to get the clickcount variable and if statements to successfully work. I was not able to figure out how to get the intial drawing to appear again after the 5th variation. I beleive this would require some form of loop to the click counter and I was not sure how to set it up with my current knowledge of if statements and the clickcount variable. I would be curious to figure out how this works at some point however
+
