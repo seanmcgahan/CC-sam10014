@@ -1,4 +1,5 @@
-let x = 0;
+//let x = 0;
+//let incX = 0.01;
 //let rectSize;
 
 function setup() {
@@ -8,8 +9,13 @@ function setup() {
 }
 
 function draw() {
-    background(0, 0, 90);
-    
+
+   // if background
+   if(mouseX < 800 && mouseX > 0 && mouseY > 0 && mouseY < 800) {
+        background(0, 0, 90);
+   }else{
+        background(100, 25, 100)
+   }
     //if statement set up
 
 
