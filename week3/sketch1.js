@@ -16,7 +16,14 @@ function draw() {
     // basic draw settings
     translate(400, 400);
     angleMode(DEGREES);
-    rotate(45);
+
+    // if rotation
+    if(mouseX > 400) {
+        rotate(-45);
+    }
+    else{
+        rotate(135)
+    }
 
     for(let i = 0; i < 7; i++) { // for loop (x axis)
         for(let w = 0; w < 7; w++) { // for loop (y axis)
@@ -27,7 +34,7 @@ function draw() {
 
         // if stroke
         strokeWeight(2)
-        if(mouseX > 400) {
+        if(mouseY < 400) {
             stroke(0, 0, 0);
         }
         else{
@@ -40,6 +47,7 @@ function draw() {
         rectMode(CENTER);
         rect(i*100 - 300, w*100 - 300,
             i*w*1.2 + 50);
+
         }
     }
 }
