@@ -14,7 +14,7 @@ function draw() {
    if(mouseX < 800 && mouseX > 0 && mouseY > 0 && mouseY < 800) {
         background(0, 0, 90);
    }else{
-        background(100, 25, 100)
+        background(100, 25, 100);
    }
     //if statement set up
 
