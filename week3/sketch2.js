@@ -1,6 +1,3 @@
-//let x = 0;
-//let incX = 0.01;
-//let rectSize;
 
 let g = 40
 let h = 0
@@ -13,21 +10,36 @@ function setup() {
 
 function draw() {
 
-   // if background
+//    if background
    if(mouseX < 800 && mouseX > 0 && mouseY > 0 && mouseY < 800) {
         background(40, 50, 90);
    }else{
-        background(100, 25, 100);
+        background(0, 25, 100);
    }
-    //if statement set up
+
+    //if background 2
+    if(mouseX > 50 && mouseX < 150 || mouseX > 250 && mouseX < 350 || mouseX > 450 && mouseX < 550 || mouseX > 650 && mouseX < 750) {
+        background (200, 25, 100)
+    }
 
     push()
-    if(mouseX < 800 && mouseX > 0 && mouseY > 0 && mouseY < 800) {
+    if(mouseX < 0 || mouseX > 50 && mouseX < 150 || mouseX > 250 && mouseX < 350 || mouseX > 450 && mouseX < 550 || mouseX > 650 && mouseX < 750 || mouseX > 800) {
         g = -40;
     }else{
         g = 40;
     }
     pop()
+
+
+    //if statement set up
+
+    // push()
+    // if(mouseX < 800 && mouseX > 0 && mouseY > 0 && mouseY < 800) {
+    //     g = -40;
+    // }else{
+    //     g = 40;
+    // }
+    // pop()
 
     //flip triangle
     
@@ -35,6 +47,8 @@ function draw() {
     // basic draw settings
     translate(400, 400);
     angleMode(DEGREES);
+    strokeWeight(2);
+    // noStroke()
 
 
     
@@ -50,8 +64,8 @@ function draw() {
         for(let w = 0; w < 11; w++) { // for loop (y axis)
 
         // color
-        // colorMode(HSB);
-        // fill(360*(i*w/25), 100*(i*w/50), 100);
+        colorMode(HSB);
+        fill(360*(i*w/25), 100*(i*w/50), 100);
 
         // if stroke
         // strokeWeight(2)
@@ -66,6 +80,7 @@ function draw() {
 
         //Draw Triangles
         push()
+        fill(0, 0, 100)
         translate(-400 , -350)
         triangle(i*200, w*75 + g, i*200 + g, w*75 + 0, i*200 - g, w*75 + 0)
         pop()
