@@ -48,16 +48,9 @@ function draw() {
 
         //Draw Triangles set 1
         push()
-        fill(0, 0, 100);
-        translate(-400 , -350);
-        triangle(i*200, w*75 + g, i*200 + g, w*75 + 0, i*200 - g, w*75 + 0);
-        pop()
-
-
-        // Draw Triangles set 2
-        push()
-        translate(-300, -350);
-        triangle(-g + i*200, w*75 + 0, g + i*200, w*75 + 0, i*200 + 0, -g + w*75);
+        ellipse(i*100 - 400, 0, 75) // Middle Row
+        ellipse(i*100 - 400,w*-100 - 100, 65 + w*-10) // Going up
+        ellipse(i*100 - 400,w*100 + 100, 65 + w*-10) // Going down
         pop()
 
         }
