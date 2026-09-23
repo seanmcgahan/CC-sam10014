@@ -7,7 +7,7 @@ function setup() {
 
 function draw() {
 
-//    if background
+//    if background when off screen
    if(mouseX < 800 && mouseX > 0 && mouseY > 0 && mouseY < 800) {
         background(0, 0, 100);
         stroke (0, 0, 0)
@@ -16,7 +16,7 @@ function draw() {
         stroke(0, 0, 100)
    }
 
-    //if background 2 (change background color for each vertical row across)
+    //if background 2 (change background color for each horizontal row up/down)
     if(mouseY > 50 && mouseY < 150 || mouseY > 250 && mouseY < 350 || mouseY > 450 && mouseY < 550 || mouseY > 650 && mouseY < 750) {
         background (0, 0, 0);
         stroke(0, 0 , 100)
