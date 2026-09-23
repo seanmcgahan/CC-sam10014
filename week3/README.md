@@ -1,4 +1,9 @@
 # week3
+Wanted to try making something with the p5 polar library, but I am a little confused on how to use it. I believe I have to download it off of the github page, but not sure how I can use it in my sketeches. Not sure which file to download and how i get it working in my current p5js library. Would be curious to learn how to do this.
+
+
+
+
 
 ## Getting Started
 
