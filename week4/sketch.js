@@ -1,3 +1,5 @@
+let bDoExportSvg = false;
+
 function setup() {
     createCanvas(576, 384);
 }
@@ -16,7 +18,7 @@ function draw() {
   }
 
   // Draw stuff here, such as:
- ellipse(200, 200, 50); 
+  ellipse(200, 200, 50); 
 
   if (bDoExportSvg){
     endRecordSvg();
