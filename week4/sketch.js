@@ -21,6 +21,7 @@ function draw() {
     background(220);
     translate(288, 192);
     angleMode(DEGREES);
+    strokeWeight(2)
   
 
 
