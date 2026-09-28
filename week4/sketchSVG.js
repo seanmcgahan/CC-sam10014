@@ -1,46 +1,39 @@
-let bDoExportSvg = false;
+p5.disableFriendlyErrors = true; // keep warnings quiet
+let bDoExportSvg = false; 
 
-function setup() {
-    createCanvas(576, 384);
+function setup(){
+  createCanvas(576, 384); 
+  angleMode(DEGREES);
+  noFill();
+
 }
 
-function keyPressed() {
+function keyPressed(){
   if (key == 's'){ 
     bDoExportSvg = true; 
   }
 }
 
-function draw() {
-    
+function draw(){
 
-    if (bDoExportSvg){
-    beginRecordSvg("myOutputSM.svg");
+  background(255); 
+  if (bDoExportSvg){
+    beginRecordSvg("myOutput.svg");
   }
 
   // Draw stuff here, such as:
-    background(220);
-    translate(288, 192);
-    angleMode(DEGREES);
-    strokeWeight(2)
-  
+     for(let i = 0; i < 10; i++) { 
+
+      push()
+      rectMode(CENTER);
+      rect(288, 192, 60 * i, 40 * i);
+      pop()
+     }
 
 
-    for(let i = 0; i < 11; i++) { // for loop (x axis)
-        for(let w = 0; w < 11; w++) { // for loop (y axis)
-
-
-
-        //Draw Triangles set 1
-        push()
-        ellipse(i*100 - 288, 0, 75) // Middle Row
-        ellipse(i*100 - 288,w*-100 - 100, 65 + w*-10) // Going up
-        ellipse(i*100 - 288,w*100 + 100, 65 + w*-10) // Going down
-        pop()
-        }
-      }
-
-  if (bDoExportSvg) {
+  if (bDoExportSvg){
     endRecordSvg();
     bDoExportSvg = false;
   }
 }
+
