@@ -11,14 +11,15 @@ function keyPressed() {
 }
 
 function draw() {
-    background(240);
+    
 
     if (bDoExportSvg){
-    beginRecordSvg("myOutput.svg");
+    beginRecordSvg("myOutputSM.svg");
   }
 
   // Draw stuff here, such as:
- translate(288, 192);
+    background(220);
+    translate(288, 192);
     angleMode(DEGREES);
   
 
@@ -37,7 +38,7 @@ function draw() {
         }
       }
 
-  if (bDoExportSvg){
+  if (bDoExportSvg) {
     endRecordSvg();
     bDoExportSvg = false;
   }
