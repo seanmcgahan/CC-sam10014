@@ -16,7 +16,7 @@ function keyPressed(){
 }
 
 function drawRectangle (x, y, rot) {
-
+  
 }
 
 function draw(){
@@ -26,22 +26,21 @@ function draw(){
   }
 
   // Draw stuff here, such as
-function draw() {
-  background(245);
+  for(let i = 0; i < 7; i++) { // for loop (x axis)
+        for(let w = 0; w < 11; w++) { // for loop (y axis)
 
-  let noiseScale = 0.01; // Smaller number = smoother wave
 
-  for (let x = 30; x <= width - 30; x += 10) {
-    // Calculate length based on noise
-    let len = noise(x * noiseScale) * (height * 0.6);
 
-    // Center lines vertically on the canvas
-    let y1 = height / 2 - len / 2;
-    let y2 = height / 2 + len / 2;
+        //Draw Triangles set 1
+        push()
+        ellipse(i*70 + 75, 192, 60) // Middle Row
+        ellipse(i*70 + 75,w*-50 + 130, 50 + w*-10) // Going up
+        ellipse(i*70 + 75,w*50 + 255, 50 + w*-10) // Going up
 
-    line(x, y1, x, y2);
-  }
-}
+        pop()
+
+        }
+    }
 
   if (bDoExportSvg){
     endRecordSvg();
