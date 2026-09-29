@@ -26,7 +26,7 @@ function draw(){
 
 
   // Draw stuff here, such as
-  for(let i = 0; i < 7; i++) { // for loop (x axis)
+  for(let i = 0; i < 3; i++) { // for loop (x axis)
         for(let w = 0; w < 11; w++) { // for loop (y axis)
 
 
