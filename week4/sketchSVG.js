@@ -23,7 +23,7 @@ function draw(){
 
   background(255); 
   if (bDoExportSvg){
-    beginRecordSvg("myOutput.svg");
+    beginRecordSvg("myOutputSeed29.svg");
   }
 
   // Draw stuff here, such as:
