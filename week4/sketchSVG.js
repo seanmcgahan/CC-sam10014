@@ -29,7 +29,7 @@ function draw(){
   // Draw stuff here, such as:
      for(let i = 0; i < 8; i++) { 
 
-      let n = noise(i * .9) * 130;
+      let n = noise(i * .9) * 130; // goal was to have concentric rectangles with some noise to affect the sizing so they all werent the same. Affects x axis only
 
       push()
       rectMode(CENTER);

@@ -2,7 +2,6 @@ p5.disableFriendlyErrors = true; // keep warnings quiet
 let bDoExportSvg = false; 
 
 function setup(){
-  // These canvas dimensions are 8.5"x11" at 96 dpi
   createCanvas(576, 384); 
   stroke(0);
   noFill(0);
@@ -29,10 +28,10 @@ function draw(){
 
 
 
-        //Draw Triangles set 1
+        //Draw circles
         push()
         ellipse(i*70 + 75,w*-50 + 130, 50 + w*-10, 50 + w*-10); // Going up
-        ellipse(i*70 + 75,w*50 + 255, 50 + w*-10, 50 + w*-10); // Going up
+        ellipse(i*70 + 75,w*50 + 255, 50 + w*-10, 50 + w*-10); // Going down
 
         pop()
 
