@@ -20,6 +20,7 @@ function draw(){
   }
 
   // Draw stuff here, such as:
+  // modified my 3rd drawing from last week to fit into this format
  for(let i = 0; i < 7; i++) { // for loop (x axis)
 
   ellipse(i*70 + 75, 192, 60, 60); // Middle Row

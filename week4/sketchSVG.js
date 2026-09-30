@@ -19,7 +19,7 @@ function keyPressed(){
 }
 
 function draw(){
-  
+  // first layer of my drawing, using this as a background layer essentually to go under the circles in my other sketch. Worked noise into the sizing to keep it organic looking
 
   background(255); 
   if (bDoExportSvg){
@@ -29,7 +29,7 @@ function draw(){
   // Draw stuff here, such as:
      for(let i = 0; i < 8; i++) { 
 
-      let n = noise(i * .9) * 130; // goal was to have concentric rectangles with some noise to affect the sizing so they all werent the same. Affects x axis only
+      let n = noise(i * .9) * 130; // goal was to have concentric rectangles with some noise to affect the sizing
 
       push()
       rectMode(CENTER);
