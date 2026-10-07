@@ -15,7 +15,7 @@ let posy = [];
 
 
 function setup() {
-    createCanvas(800, 600);
+    createCanvas(windowWidth, windowHeight);
 
 }
 
@@ -38,9 +38,11 @@ function draw() {
                 // save current second to the previous second variable
                 ps = s;
 
+//-------------------------------------------
 
      //window array set up
-     
+
+     //Seconds building (far right)
         // window array 1
                 let numCirc = s/2; // num of circles
                     // arrays for locations
@@ -49,8 +51,8 @@ function draw() {
 
                 // fill array with data
                 for (let i = 0; i < numCirc; i++) {
-                win1x[i] = 20;
-                win1y[i] = 30 + i*25;
+                win1x[i] = 1100;
+                win1y[i] = 600 - i*17;
                 }
         
         // window array 2
@@ -60,16 +62,122 @@ function draw() {
 
                 // fill array with data
                 for (let i = 0; i < numWin2; i++) {
-                win2x[i] = 90;
-                win2y[i] = 30 + i*25;
+                win2x[i] = 1117;
+                win2y[i] = 600 - i*17;
                 }
 
-    for (let i = 0; i < numCirc; i++) {
-    rect(win1x[i], win1y[i], 20, 20);
-  }
+        // Window print 1
+                for (let i = 0; i < numCirc; i++) {
+                rect(win1x[i], win1y[i], 12, 12);
+            }
 
-  for (let i = 0; i < numWin2; i++) {
-    rect(win2x[i], win2y[i], 20, 20);
-  }
-  }
+         // Window print 2
+            for (let i = 0; i < numWin2; i++) {
+                rect(win2x[i], win2y[i], 12, 12);
+            }
+
+    //-------------------------------------------
+
+    // minutes building (middle)
+        //window array 1 (minutes)
+                let numMin1 = m/4; // num of windows for minutes
+                    // arrays for locations
+                let min1x = [];
+                let min1y = [];
+            // window locations
+                for (let w = 0; w < numMin1; w++) {
+                min1x[w] = 600;
+                min1y[w] = 600 - w*17;
+                }
+
+            // Draw minute windows
+                for (let w = 0; w < numMin1; w++) {
+                rect(min1x[w], min1y[w], 12, 12);
+            }
+
+             //window array 2 (minutes)
+                let numMin2 = (m-1)/4; // num of windows for minutes
+                    // arrays for locations
+                let min2x = [];
+                let min2y = [];
+            // window locations 2
+                for (let w = 0; w < numMin2; w++) {
+                min2x[w] = 617;
+                min2y[w] = 600 - w*17;
+                }
+
+            // Draw minute windows 2
+                for (let w = 0; w < numMin2; w++) {
+                rect(min2x[w], min2y[w], 12, 12);
+            }
+
+            //window array 3 (minutes)
+                let numMin3 = (m-2)/4; // num of windows for minutes
+                    // arrays for locations
+                let min3x = [];
+                let min3y = [];
+            // window locations 3
+                for (let w = 0; w < numMin3; w++) {
+                min3x[w] = 634;
+                min3y[w] = 600 - w*17;
+                }
+
+            // Draw minute windows 3
+                for (let w = 0; w < numMin3; w++) {
+                rect(min3x[w], min3y[w], 12, 12);
+            }
+
+            //window array 4 (minutes)
+                let numMin4 = (m-3)/4; // num of windows for minutes
+                    // arrays for locations
+                let min4x = [];
+                let min4y = [];
+            // window locations 4
+                for (let w = 0; w < numMin4; w++) {
+                min4x[w] = 651;
+                min4y[w] = 600 - w*17;
+                }
+
+            // Draw minute windows 4
+                for (let w = 0; w < numMin4; w++) {
+                rect(min4x[w], min4y[w], 12, 12);
+            }
+
+
+    // --------------------------------------
+
+    // hours building (left
+        //hours array 1
+                let numHr1 = (h % 12)/2; // num of windows for hours
+                    // arrays for locations
+                let hr1x = [];
+                let hr1y = [];
+            // window locations
+                for (let q = 0; q < numHr1; q++) {
+                hr1x[q] = 300;
+                hr1y[q] = 600 - q*17;
+                }
+
+            // Draw hour windows
+                for (let q = 0; q < numHr1; q++) {
+                rect(hr1x[q], hr1y[q], 12, 12);
+            }
+
+        //hours array 2
+                let numHr2 = ((h % 12)-1)/2; // num of windows for hours
+                    // arrays for locations
+                let hr2x = [];
+                let hr2y = [];
+            // window locations
+                for (let q = 0; q < numHr2; q++) {
+                hr2x[q] = 317;
+                hr2y[q] = 600 - q*17;
+                }
+
+            // Draw hour windows
+                for (let q = 0; q < numHr2; q++) {
+                rect(hr2x[q], hr2y[q], 12, 12);
+            }
+
+}
 
