@@ -158,10 +158,64 @@ function draw() {
         drawbuilding1();
         pop();
 
+        // building 1.9
+        push();
+        height1 = -180;
+        width1 = 94;
+        translate(980, 0, 0);
+        fill(0, 20, 80);
+        drawbuilding1();
+        pop();
+
+        // building 1.10
+        push();
+        height1 = -180;
+        width1 = 43;
+        translate(80, 0, 0);
+        fill(0, 20, 60);
+        drawbuilding1();
+        pop();
+
+        //building 1.11
+        push();
+        height1 = -300;
+        width1 = 94;
+        translate(-25, 0, 0);
+        fill(0, 0, 80);
+        drawbuilding1();
+        pop();
+
+        // building 1.12
+        push();
+        height1 = -384;
+        width1 = 94;
+        translate(1293, 0, 0);
+        fill(0, 0, 80);
+        drawbuilding1();
+        pop();
+
+        //building 1.13
+        push();
+        height1 = -299;
+        width1 = 60;
+        translate(1400, 0, 0);
+        fill(60, 40, 60);
+        drawbuilding1();
+        pop();
+
+        //building 1.14
+        push();
+        height1 = -452;
+        width1 = 60;
+        translate(1473, 0, 0);
+        fill(20, 40, 60);
+        drawbuilding1();
+        pop();
+
 //road
             push();
             fill(0, 0, 20);
-            rect(0, 620, windowWidth, 80);
+            rect(0, 620, windowWidth, 110);
             pop();
 
 // sidewalk
