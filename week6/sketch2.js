@@ -86,16 +86,16 @@ function draw() {
 // general scenery
 
 // other buildings
-        // background building 1.1
+        // building 1.1
         push();
         height1 = -435;
-        width1 = 60;
-        translate(350, 0, 0);
-        fill(0, 70, 50);
+        width1 = 77;
+        translate(353, 0, 0);
+        fill(0, 70, 40);
         drawbuilding1();
         pop();
 
-        // background building 1.2
+        // building 1.2
         push();
         height1 = -350;
         width1 = 94;
@@ -104,7 +104,7 @@ function draw() {
         drawbuilding1();
         pop();
 
-        // background building 1.3
+        // building 1.3
         push();
         height1 = -200;
         width1 = 127;
@@ -113,12 +113,48 @@ function draw() {
         drawbuilding1();
         pop();
 
-        // background building 1.4
+        // building 1.4
         push();
         height1 = -300;
         width1 = 77;
         translate(805, 0, 0);
         fill(50, 50, 50);
+        drawbuilding1();
+        pop();
+
+        // building 1.5
+        push();
+        height1 = -95;
+        width1 = 144;
+        translate(135, 0, 0);
+        fill(60, 60, 60);
+        drawbuilding1();
+        pop();
+
+        // building 1.6
+        push();
+        height1 = -500;
+        width1 = 77;
+        translate(500, 0, 0);
+        fill(30, 20, 50);
+        drawbuilding1();
+        pop();
+
+        // building 1.7
+        push();
+        height1 = -450;
+        width1 = 42;
+        translate(445, 0, 0);
+        fill(40, 40, 40);
+        drawbuilding1();
+        pop();
+
+        // building 1.8
+        push();
+        height1 = -468;
+        width1 = 60;
+        translate(900, 0, 0);
+        fill(50, 30, 70);
         drawbuilding1();
         pop();
 
