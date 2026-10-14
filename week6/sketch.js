@@ -16,11 +16,49 @@ let posy = [];
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
+    colorMode(HSB);
 
 }
 
 function draw() {
     background(220);
+
+//  buildings shapes
+            // seconds building (far right)
+            push();
+            fill(30, 70, 50);
+            rect(1094.5, 620, 40, -525);
+            pop();
+
+            //seconds windows
+            
+
+            // minutes building (middle)
+            push();
+            fill(35, 40, 60);
+            rect(592, 620, 79.5, -268);
+            pop();
+
+            // hours building (far left)
+            push();
+            fill(50, 70, 80);
+            rect(292, 620, 79.5, -400);
+            pop();
+
+// general scenery
+
+// background buildings
+
+//road
+            push();
+            fill(0, 0, 20);
+            rect(0, 620, windowWidth, 80);
+            pop();
+
+
+
+
+
 
    //clock set up
                 let h = hour();
@@ -28,8 +66,10 @@ function draw() {
                 let s = second();
                 // print(h + ":" + m + ":" + s);
 
-                
+                push();
+                fill(0,0,0);
                 text('current time: ' + h + ':' + nf(m, 2, 0) + ':' + nf(s, 2, 0), 10, 170);
+                pop();
 
                 // only update console when the second changes value
                 if (ps != s) {
@@ -42,9 +82,11 @@ function draw() {
 
      //window array set up
 
+     fill(50, 60, 100);
+
      //Seconds building (far right)
         // window array 1
-                let numCirc = s/2; // num of circles
+                let numCirc = s/2; // num of windows
                     // arrays for locations
                 let win1x = [];
                 let win1y = [];
