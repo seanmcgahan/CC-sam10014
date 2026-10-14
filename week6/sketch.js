@@ -8,10 +8,10 @@ let ms, fc; // variable for counting relative to this sketch
 //let windows = [];
 
 // basic array
-let numCirc = 10; // num of circles
-// arrays for locations
-let posx = [];
-let posy = [];
+// let numCirc = 10; // num of circles
+// // arrays for locations
+// let posx = [];
+// let posy = [];
 
 
 function setup() {
@@ -31,7 +31,12 @@ function draw() {
             pop();
 
             //seconds windows
-            
+            push();
+            fill(200, 70, 30);
+            for (let v = 0; v < 30; v++)
+            for (let u = 0; u < 2; u++)
+                rect(1117 - u*17, 600 - v*17, 12, 12);
+            pop();
 
             // minutes building (middle)
             push();
@@ -39,10 +44,26 @@ function draw() {
             rect(592, 620, 79.5, -268);
             pop();
 
+            // minutes windows
+            push();
+            fill(200, 70, 30);
+            for (let v = 0; v < 15; v++)
+            for (let u = 0; u < 4; u++)
+                rect(600 + u*17, 600 - v*17, 12, 12);
+            pop();
+
             // hours building (far left)
             push();
-            fill(50, 70, 80);
-            rect(292, 620, 79.5, -400);
+            fill(50, 0, 70);
+            rect(292, 620, 46.5, -120);
+            pop();
+
+            //hours windows
+            push();
+            fill(200, 70, 30);
+            for (let v = 0; v < 6; v++)
+            for (let u = 0; u < 2; u++)
+                rect(300 + u*17, 600 - v*17, 12, 12);
             pop();
 
 // general scenery
