@@ -13,6 +13,8 @@ let ms, fc; // variable for counting relative to this sketch
 // let posx = [];
 // let posy = [];
 
+let height1 = -435;
+
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -20,8 +22,22 @@ function setup() {
 
 }
 
+function drawbuilding1() {
+    // draw new building version 1
+    push();
+    rect(0, 620, 60, height1);
+    // windows
+    fill(200, 70, 30);
+    for (let v = 0; v < floor(-height1/17); v++)
+    for (let u = 0; u < 3; u++)
+        rect(40 - u*17, 600 - v*17, 12, 12);
+    pop();
+}
+
 function draw() {
     background(220);
+
+    text('test version', 400,);
 
 //  buildings shapes
             // seconds building (far right)
@@ -68,7 +84,30 @@ function draw() {
 
 // general scenery
 
-// background buildings
+// other buildings
+        // background building 1.1
+        push();
+        height1 = -435;
+        translate(350, 0, 0);
+        fill(0, 70, 50);
+        drawbuilding1();
+        pop();
+
+        // background building 1.2
+        push();
+        height1 = -350;
+        translate(690, 0, 0);
+        fill(0, 0, 55);
+        drawbuilding1();
+        pop();
+
+        // background building 1.3
+        push();
+        height1 = -200;
+        translate(1150, 0, 0);
+        fill(20, 70, 50);
+        drawbuilding1();
+        pop();
 
 //road
             push();
