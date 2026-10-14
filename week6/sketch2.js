@@ -13,7 +13,8 @@ let ms, fc; // variable for counting relative to this sketch
 // let posx = [];
 // let posy = [];
 
-let height1 = -435;
+let height1;
+let width1;
 
 
 function setup() {
@@ -25,12 +26,12 @@ function setup() {
 function drawbuilding1() {
     // draw new building version 1
     push();
-    rect(0, 620, 60, height1);
+    rect(0, 620, width1, height1);
     // windows
     fill(200, 70, 30);
     for (let v = 0; v < floor(-height1/17); v++)
-    for (let u = 0; u < 3; u++)
-        rect(40 - u*17, 600 - v*17, 12, 12);
+    for (let u = 0; u < floor(width1/17); u++)
+        rect(6.5 +u*17, 600 - v*17, 12, 12);
     pop();
 }
 
@@ -88,6 +89,7 @@ function draw() {
         // background building 1.1
         push();
         height1 = -435;
+        width1 = 60;
         translate(350, 0, 0);
         fill(0, 70, 50);
         drawbuilding1();
@@ -96,6 +98,7 @@ function draw() {
         // background building 1.2
         push();
         height1 = -350;
+        width1 = 94;
         translate(690, 0, 0);
         fill(0, 0, 55);
         drawbuilding1();
@@ -104,8 +107,18 @@ function draw() {
         // background building 1.3
         push();
         height1 = -200;
+        width1 = 127;
         translate(1150, 0, 0);
         fill(20, 70, 50);
+        drawbuilding1();
+        pop();
+
+        // background building 1.4
+        push();
+        height1 = -300;
+        width1 = 77;
+        translate(805, 0, 0);
+        fill(50, 50, 50);
         drawbuilding1();
         pop();
 
