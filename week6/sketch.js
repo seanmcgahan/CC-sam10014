@@ -76,6 +76,12 @@ function draw() {
             rect(0, 620, windowWidth, 80);
             pop();
 
+// sidewalk
+            push();
+            fill(20, 20, 70);
+            rect(0, 620, windowWidth, 10);
+            pop();
+
 
 
 
