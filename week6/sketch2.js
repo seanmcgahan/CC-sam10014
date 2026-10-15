@@ -203,7 +203,7 @@ function draw() {
         drawbuilding1();
         pop();
 
-        //building 1.14 test
+        //building 1.14
         push();
         height1 = -452;
         width1 = 60;
