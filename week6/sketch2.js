@@ -21,6 +21,8 @@ function setup() {
     createCanvas(windowWidth, windowHeight);
     colorMode(HSB);
 
+    randomheight = random(-120, -500);
+
 }
 
 function drawbuilding1() {
@@ -36,13 +38,31 @@ function drawbuilding1() {
 }
 
 function draw() {
-    background(220);
+    //background(220);
+
+    //sky (static)
+    background(220, 30, 100);
 
     text('test version', 400,);
+
+    // background skyline
+
+    push();
+    translate(0, 0, 0);
+    noStroke();
+    fill(0, 0, 25);
+    //drawbuilding1();
+    //rect(240, 640, 77, -220);
+    for(let i = 0; i < 15; i++) { // for loop (x axis)
+        rect(i*100, 640, 77, randomheight);
+    }
+    filter(BLUR, 7);
+    pop();
 
 //  buildings shapes
             // seconds building (far right)
             push();
+            stroke(0, 0, 100);
             fill(30, 70, 50);
             rect(1094.5, 620, 40, -525);
             pop();
@@ -57,6 +77,7 @@ function draw() {
 
             // minutes building (middle)
             push();
+            stroke(0, 0, 100);
             fill(35, 40, 60);
             rect(592, 620, 79.5, -268);
             pop();
@@ -71,6 +92,7 @@ function draw() {
 
             // hours building (far left)
             push();
+            stroke(0, 0, 100);
             fill(50, 0, 70);
             rect(292, 620, 46.5, -120);
             pop();
