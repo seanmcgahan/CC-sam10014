@@ -21,7 +21,8 @@ function setup() {
     createCanvas(windowWidth, windowHeight);
     colorMode(HSB);
 
-    randomheight = random(-120, -500);
+   // randomSeed(143);
+    // randomheight = random(-120, -500);
 
 }
 
@@ -43,23 +44,123 @@ function draw() {
     //sky (static)
     background(220, 30, 100);
 
-    text('test version', 400,);
-
     // background skyline
 
     push();
+    randomSeed(122);  //122 looks good for reference to come back to
     translate(0, 0, 0);
-    noStroke();
-    fill(0, 0, 25);
+    //noStroke();
+    strokeWeight(0);
+    fill(20, 30, 45);
     //drawbuilding1();
     //rect(240, 640, 77, -220);
-    for(let i = 0; i < 15; i++) { // for loop (x axis)
-        rect(i*100, 640, 77, randomheight);
+    for(let i = 0; i < 40; i++) { // for loop (x axis)
+        let randomheight = random(-150, -500);
+        let randomwidth = random(40, 55);
+        //let randomspacing = random(60, 85)
+        rect(i*40, 640, randomwidth, randomheight);
     }
-    filter(BLUR, 7);
+    filter(BLUR, 9);
     pop();
 
-//  buildings shapes
+    // 2nd row of buildings
+    // from left to right
+    push();
+
+    //2.1
+    push();
+    height1 = -231;
+    width1 = 127;
+    translate(60, 0, 0);
+    fill(100, 50, 25);
+    drawbuilding1();
+    pop();
+
+    //2.2
+    push();
+    height1 = -200;
+    width1 = 111;
+    translate(200, 0, 0);
+    fill(40, 50, 30);
+    drawbuilding1();
+    pop();
+
+    //2.3
+    push();
+    height1 = -250;
+    width1 = 160;
+    translate(322, 0, 0);
+    fill(60, 50, 40);
+    drawbuilding1();
+    pop();
+
+    //2.4
+    push();
+    height1 = -180;
+    width1 = 140;
+    translate(480, 0, 0);
+    fill(0, 50, 35);
+    drawbuilding1();
+    pop();
+
+    //2.5
+    push();
+    height1 = -300;
+    width1 = 130;
+    translate(620, 0, 0);
+    fill(30, 50, 40);
+    drawbuilding1();
+    pop();
+
+    //2.6
+    push();
+    height1 = -250;
+    width1 = 120;
+    translate(760, 0, 0);
+    fill(0, 0, 45);
+    drawbuilding1();
+    pop();
+
+    //2.7
+    push();
+    height1 = -270;
+    width1 = 177;
+    translate(840, 0, 0);
+    fill(20, 20, 50);
+    drawbuilding1();
+    pop();
+
+    //2.8
+    push();
+    height1 = -220;
+    width1 = 144;
+    translate(1030, 0, 0);
+    fill(95, 25, 50);
+    drawbuilding1();
+    pop();
+
+    //2.9
+    push();
+    height1 = -298;
+    width1 = 150;
+    translate(1190, 0, 0);
+    fill(10, 60, 50);
+    drawbuilding1();
+    pop();
+
+    //2.10
+    push();
+    height1 = -165;
+    width1 = 155;
+    translate(1331, 0, 0);
+    fill(20, 20, 70);
+    drawbuilding1();
+    pop();
+
+    filter(BLUR, 2);
+    pop();
+
+// time buildings shapes
             // seconds building (far right)
             push();
             stroke(0, 0, 100);
@@ -107,7 +208,7 @@ function draw() {
 
 // general scenery
 
-// other buildings
+// other buildings (first row)
         // building 1.1
         push();
         height1 = -435;
