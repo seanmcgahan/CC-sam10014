@@ -44,6 +44,26 @@ function draw() {
     //sky (static)
     background(220, 30, 100);
 
+    // dynamic sky
+ // let hournumber = hour();
+    let hournumber = 21
+    // daytime
+    if (hournumber >= 7 && hournumber < 18) {
+        background(220, 30, 100);
+    // dusk
+    } else if (hournumber >= 18 && hournumber < 19) {
+        background(220, 30, 50);
+    // evening
+    } else if (hournumber >= 19 && hournumber < 21) {
+        background(220, 30, 25);
+    // night
+    } else if (hournumber >= 21 || hournumber < 6) {
+        background(220, 30, 10);
+    // early morning sunrise
+    } else if (hournumber >= 6 && hournumber < 7) {
+        background(15, 55, 100);
+    }
+
     // background skyline
 
     push();
@@ -51,7 +71,14 @@ function draw() {
     translate(0, 0, 0);
     //noStroke();
     strokeWeight(0);
-    fill(20, 30, 45);
+    if (hournumber >= 19 && hournumber < 21) {
+        fill(20, 30, 30);
+    }
+    if (hournumber >= 21 || hournumber < 6) {
+        fill(20, 30, 15);
+    } else if (hournumber >= 6 && hournumber < 19) {
+        fill(20, 30, 45);
+    }
     //drawbuilding1();
     //rect(240, 640, 77, -220);
     for(let i = 0; i < 40; i++) { // for loop (x axis)
@@ -62,6 +89,7 @@ function draw() {
     }
     filter(BLUR, 9);
     pop();
+
 
     // 2nd row of buildings
     // from left to right
@@ -345,6 +373,18 @@ function draw() {
             push();
             fill(20, 20, 70);
             rect(0, 620, windowWidth, 10);
+            pop();
+
+// grass
+            push();
+            fill(90, 80, 50);
+            rect(0, 730, windowWidth, 40);
+            pop();
+
+//sidewalk 2
+            push();
+            fill(20, 20, 70);
+            rect(0, 720, windowWidth, 10);
             pop();
 
 
