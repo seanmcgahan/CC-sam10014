@@ -15,6 +15,7 @@ let ms, fc; // variable for counting relative to this sketch
 
 let height1;
 let width1;
+// allows adjustable sizing of buildings when I insert them in
 
 
 function setup() {
@@ -27,7 +28,7 @@ function setup() {
 }
 
 function drawbuilding1() {
-    // draw new building version 1
+    // draw new building version 1. Using this to reference in the all buildings that arent the one with hours, seconds, or minutes
     push();
     rect(0, 620, width1, height1);
     // windows
@@ -42,11 +43,11 @@ function draw() {
     //background(220);
 
     //sky (static)
-    background(220, 30, 100);
+    // background(220, 30, 100);
 
-    // dynamic sky
- // let hournumber = hour();
-    let hournumber = 21
+    // dynamic sky. Sky changes shade depending on the time of day
+    let hournumber = hour();
+    // let hournumber = 21
     // daytime
     if (hournumber >= 7 && hournumber < 18) {
         background(220, 30, 100);
@@ -71,6 +72,8 @@ function draw() {
     translate(0, 0, 0);
     //noStroke();
     strokeWeight(0);
+
+    // darken skyline if it is nightime
     if (hournumber >= 19 && hournumber < 21) {
         fill(20, 30, 30);
     }
@@ -79,8 +82,6 @@ function draw() {
     } else if (hournumber >= 6 && hournumber < 19) {
         fill(20, 30, 45);
     }
-    //drawbuilding1();
-    //rect(240, 640, 77, -220);
     for(let i = 0; i < 40; i++) { // for loop (x axis)
         let randomheight = random(-150, -500);
         let randomwidth = random(40, 55);
@@ -92,7 +93,7 @@ function draw() {
 
 
     // 2nd row of buildings
-    // from left to right
+    // from left to right. Placing buildings manually to get positioning and spacing to my liking. Didn't like using a loop for this
     push();
 
     //2.1
@@ -188,7 +189,7 @@ function draw() {
     filter(BLUR, 2);
     pop();
 
-// time buildings shapes
+// time buildings shapes. These are just the simple rectangle shapes of the hours, minutes, and seconds buildings. doesnt include windows, those are in their own logic
             // seconds building (far right)
             push();
             stroke(0, 0, 100);
@@ -236,7 +237,7 @@ function draw() {
 
 // general scenery
 
-// other buildings (first row)
+// other buildings (first row). Once again placing manually so I can control the composition better. Works well with how I set up the building size to be dynamic and customizable.
         // building 1.1
         push();
         height1 = -435;
@@ -284,7 +285,7 @@ function draw() {
 
         // building 1.6
         push();
-        height1 = -500;
+        height1 = -503;
         width1 = 77;
         translate(500, 0, 0);
         fill(30, 20, 50);
@@ -369,7 +370,7 @@ function draw() {
             rect(0, 620, windowWidth, 110);
             pop();
 
-// sidewalk
+// sidewalk (top one)
             push();
             fill(20, 20, 70);
             rect(0, 620, windowWidth, 10);
@@ -381,7 +382,7 @@ function draw() {
             rect(0, 730, windowWidth, 40);
             pop();
 
-//sidewalk 2
+//sidewalk 2 (bottom one)
             push();
             fill(20, 20, 70);
             rect(0, 720, windowWidth, 10);
@@ -392,7 +393,7 @@ function draw() {
 
 
 
-   //clock set up
+   //clock set up 
                 let h = hour();
                 let m = minute();
                 let s = second();
@@ -412,13 +413,15 @@ function draw() {
 
 //-------------------------------------------
 
-     //window array set up
+     //window array set up. This adds a new window for each unit of time that passes. Each new window is yellow creating the effect that lights are turning on
+     // The collumns of each are offset by a set amount of time so the windows light up across the row before moving up to the next one
+     // referenced the array examples in the class github page to get my baseline for how this would work
 
      fill(50, 60, 100);
 
      //Seconds building (far right)
         // window array 1
-                let numCirc = s/2; // num of windows
+                let numCirc = s/2; // num of windows. It says numCirc because it was the original code I was working with to fundamentally test if this would work and was based off of the example from class github page. I tried to change this and it broke a bunch of stuff so Im leaving the name as is
                     // arrays for locations
                 let win1x = [];
                 let win1y = [];
