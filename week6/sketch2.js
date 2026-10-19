@@ -65,6 +65,7 @@ function draw() {
         background(15, 55, 100);
     }
 
+
     // background skyline
 
     push();
@@ -370,6 +371,14 @@ function draw() {
             rect(0, 620, windowWidth, 110);
             pop();
 
+// yellow dashes
+            push();
+            fill(40, 255, 100);
+            for (let i = 0; i < windowWidth; i ++) {
+                rect(i * 40 + 15, 671, 22, 4);
+            }
+            pop();
+
 // sidewalk (top one)
             push();
             fill(20, 20, 70);
@@ -387,6 +396,21 @@ function draw() {
             fill(20, 20, 70);
             rect(0, 720, windowWidth, 10);
             pop();
+
+
+// time signs
+    
+    push();
+    fill(0, 0, 100);
+    // seconds
+    text("S", 1110, 90);
+
+    // minutes
+    text("M", 625, 340);
+
+    // hours
+    text("H", 310, 490);
+    pop();
 
 
 
