@@ -19,7 +19,7 @@ let width1;
 
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+    createCanvas(1512, 770);
     colorMode(HSB);
 
    // randomSeed(143);
