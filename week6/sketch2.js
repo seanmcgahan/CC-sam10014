@@ -60,6 +60,12 @@ function draw() {
     // night
     } else if (hournumber >= 21 || hournumber < 6) {
         background(220, 30, 10);
+        push();;
+        fill(0, 0, 100);
+        for (let i = 0; i < 100; i++) {
+            ellipse(i * 100, 20, 5, 5);
+        }
+        pop();
     // early morning sunrise
     } else if (hournumber >= 6 && hournumber < 7) {
         background(15, 55, 100);
@@ -195,7 +201,7 @@ function draw() {
             push();
             stroke(0, 0, 100);
             fill(30, 70, 50);
-            rect(1094.5, 620, 40, -525);
+            rect(1094.5, 620, 40, -534.5);
             pop();
 
             //seconds windows
@@ -210,7 +216,7 @@ function draw() {
             push();
             stroke(0, 0, 100);
             fill(35, 40, 60);
-            rect(592, 620, 79.5, -268);
+            rect(592, 620, 79.5, -279);
             pop();
 
             // minutes windows
@@ -225,7 +231,7 @@ function draw() {
             push();
             stroke(0, 0, 100);
             fill(50, 0, 70);
-            rect(292, 620, 46.5, -120);
+            rect(292, 620, 46.5, -126);
             pop();
 
             //hours windows
@@ -373,6 +379,7 @@ function draw() {
 
 // yellow dashes
             push();
+            noStroke();
             fill(40, 255, 100);
             for (let i = 0; i < windowWidth; i ++) {
                 rect(i * 40 + 15, 671, 22, 4);
@@ -402,14 +409,18 @@ function draw() {
     
     push();
     fill(0, 0, 100);
+    textSize(20);
+    textStyle(BOLD);
+    stroke(0, 100, 100);
+    strokeWeight(1);
     // seconds
-    text("S", 1110, 90);
+    text("S", 1108, 103.5);
 
     // minutes
-    text("M", 625, 340);
+    text("M", 623, 359);
 
     // hours
-    text("H", 310, 490);
+    text("H", 307.5, 511.5);
     pop();
 
 
