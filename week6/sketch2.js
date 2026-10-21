@@ -436,7 +436,7 @@ function draw() {
 
                 push();
                 fill(0,0,0);
-                text('current time: ' + h + ':' + nf(m, 2, 0) + ':' + nf(s, 2, 0), 10, 170);
+                // text('current time: ' + h + ':' + nf(m, 2, 0) + ':' + nf(s, 2, 0), 10, 170);
                 pop();
 
                 // only update console when the second changes value
