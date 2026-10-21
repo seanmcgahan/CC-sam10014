@@ -1,34 +1,21 @@
-// setting up time variables
+// setting up time variables, referred to examples on course site for this
 let s, m, h;
 let ps; // variable for previous second
 let ms, fc; // variable for counting relative to this sketch
 
 
-// shapes/windows
-//let windows = [];
-
-// basic array
-// let numCirc = 10; // num of circles
-// // arrays for locations
-// let posx = [];
-// let posy = [];
-
 let height1;
 let width1;
-// allows adjustable sizing of buildings when I insert them in
+// allows adjustable sizing of buildings when I insert them in (used in the drawbuilding1 function)
 
 
 function setup() {
     createCanvas(1512, 770);
     colorMode(HSB);
-
-   // randomSeed(143);
-    // randomheight = random(-120, -500);
-
 }
 
 function drawbuilding1() {
-    // draw new building version 1. Using this to reference in the all buildings that arent the one with hours, seconds, or minutes
+    // draw customizable building function. Using this to reference in the all buildings that arent the one with hours, seconds, or minutes
     push();
     rect(0, 620, width1, height1);
     // windows
@@ -40,9 +27,8 @@ function drawbuilding1() {
 }
 
 function draw() {
-    //background(220);
 
-    //sky (static)
+    //sky (original staticsky backround color)
     // background(220, 30, 100);
 
     // dynamic sky. Sky changes shade depending on the time of day
@@ -62,9 +48,7 @@ function draw() {
         background(220, 30, 10);
         push();;
         fill(0, 0, 100);
-        for (let i = 0; i < 100; i++) {
-            ellipse(i * 100, 20, 5, 5);
-        }
+        // stars were going to go here, but not visible due to blur. Would like to find a workaround for this in future
         pop();
     // early morning sunrise
     } else if (hournumber >= 6 && hournumber < 7) {
@@ -242,7 +226,6 @@ function draw() {
                 rect(300 + u*17, 600 - v*17, 12, 12);
             pop();
 
-// general scenery
 
 // other buildings (first row). Once again placing manually so I can control the composition better. Works well with how I set up the building size to be dynamic and customizable.
         // building 1.1
@@ -371,6 +354,8 @@ function draw() {
         drawbuilding1();
         pop();
 
+
+// other scenery
 //road
             push();
             fill(0, 0, 20);
@@ -394,7 +379,11 @@ function draw() {
 
 // grass
             push();
-            fill(90, 80, 50);
+           if (hournumber >= 6 && hournumber < 21) {
+                fill(90, 80, 50);
+            } else {
+                fill(90, 80, 30);
+            }
             rect(0, 730, windowWidth, 40);
             pop();
 
@@ -422,10 +411,6 @@ function draw() {
     // hours
     text("H", 307.5, 511.5);
     pop();
-
-
-
-
 
 
    //clock set up 
