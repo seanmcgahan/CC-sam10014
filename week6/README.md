@@ -1,25 +1,13 @@
 # week6
 
-## Getting Started
+I began my process by sketching out a few different ideas of different designs I could make, thinking logically about what steps I would need to take to create it in code. My 3rd sketch that I made was of the cityscape I ended up deciding on. I both liked this design and had a good idea of step I needed to take to move forwards to create this. The idea was to have a skyline of buildings, and the buildings would have lights that turn on in the windows for units of time that pass by: one building would represent hours with 12 windows, one building would represent minutes with 60 windows, and the last would represent seconds with 60 windows as well.
 
-Open `index.html` in your web browser and start editing `sketch.js`.
+After learning more about arrays in class and reviewing some of the extra content on them, I knew this would be the right tool to use to create the windows lighting up affect. I made a test p5 document to make sure this would work. This is the "sketch.js" document under week 6. I began by creating the basic time/clock logic so that I could have my design pull from the number of hours, seconds, and minutes.
 
-## Running Locally
+I started making the design by basing my code off of the example arrays on the class site. I used this as a baseline to refer to, editing the code to create a for loop so that it populated more windows (which were just squares) for each unit of time that passed. I did this with the seconds first. The diffcult part was creating an offset in timing of windows coming in, so that i could have the windows light up across left to right before going up to the next row. I did this by dividing the number of seconds by the number of windows across (in the case of the building showing seconds, this was s/2). This then gave a window appearing every 2 seconds instead of one. I made two collumns, with the second one using (s-1)/2, so that the windows appearing in this collumn would be lagging behind by one second. This ultimately allowed me to create a 2 x 30 square tower where a new square would appear every second, going left to right before going up. It counted from 0-59 and then reset on the new minute. I put a for loop of windows that didnt populate with the array behind it, making the background windows blue and the ones populating in yellow. This made the illusion that each window was having a light turned on.
 
-For projects with media files, use a local server:
+I followed this same logic to create 2 more buildings for both minutes and hours. I changed the dimensions on these too, which required adding more arrays and for loops. But I was able to alter my previous lines of code, adding new variables to get these to work
 
-```bash
-# Using Python
-python -m http.server 8000
+Side note: Actually a question I do have now is did I need to use different variables for each of these? I used "i" for seconds, "w" for minutes, and "q" for hours. In the moment when making this, I remember running into problems using the same variable for each of these, but I wonder if there's a way I could have simplified the code to make this. It did work as I wanted it to though so I don't want to change it and break it.
 
-# Using Node.js
-npx http-server
-
-# Using VS Code Live Server extension
-# Right-click index.html -> "Open with Live Server"
-```
-
-## Resources
-
-- [p5.js 2.0](https://beta.p5js.org/)
-- [p5.js Reference](https://p5js.org/reference/)
+I next needed to populate in the rest of the buildings in the scene, as only 3 buildings was a little sparse. I created a "drawbuilding1" function that had customizable dimensions for this. I originally was just going to use a for loop and noise to pseudo-randomly populate in other buildings, but I found that I wanted to have more intentional precision over which color and what size each building was. It improved the overall composition of the scene. Making the "drawbuilding1" function though was such a time saver, as when adding the buildings in the draw function.
