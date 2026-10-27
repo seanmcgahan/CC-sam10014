@@ -16,3 +16,8 @@ The only other issue I ran into was that with 7 different sketches all running (
 
 ## sketches projected onto boxes
 
+
+https://github.com/user-attachments/assets/66003995-ee4d-4106-b9e1-a321415e32c2
+
+<img width="3024" height="2221" alt="sketches on boxes" src="https://github.com/user-attachments/assets/fe8b585e-94f5-46bb-8425-f650f1e12649" />
+
