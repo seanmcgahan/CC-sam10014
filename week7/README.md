@@ -6,4 +6,5 @@ I started the first part of the assignment by setting up the boxes so that I had
 
 ![Alt text]('/Users/seanmcgahan/Documents/NYU/First Year/Fall 2026/Creative Coding/Proj. Mapping Images/Blank boxes.jpg')
 ![image description](./Users/seanmcgahan/Documents/NYU/First Year/Fall 2026/Creative Coding/Proj. Mapping Images/Blank boxes.jpg)
+<img width="3024" height="4032" alt="Blank boxes" src="https://github.com/user-attachments/assets/eb98da0c-36f3-4cc5-9c26-120f4d980ff1" />
 
