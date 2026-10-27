@@ -1,4 +1,4 @@
-## Projection Mapping Process
+# Projection Mapping Process
 
 I rented out a projector from the IDM equipment room to use for the assignment this week. I was at my parent's house in NJ for the weekend so I set it up in the basement with a bunch of random cardboard boxes that I found sitting around. They were brown cardboard but still worked to project onto, especially with the lights off. 
 
