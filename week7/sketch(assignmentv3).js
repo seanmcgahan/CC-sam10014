@@ -2,8 +2,6 @@ let pMapper; // mapper instance
 let myQuad; // one face
 let ballx;
 
-pMapper.load("/Users/seanmcgahan/Downloads/map.json");
-
 function setup() {
     // p5.mapper needs WEBGL in createCanvas
     createCanvas(windowWidth, windowHeight, WEBGL);

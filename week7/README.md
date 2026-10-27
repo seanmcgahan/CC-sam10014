@@ -1,0 +1,7 @@
+## Projection Mapping Process
+
+I rented out a projector from the IDM equipment room to use for the assignment this week. I was at my parent's house in NJ for the weekend so I set it up in the basement with a bunch of random cardboard boxes that I found sitting around. They were brown cardboard but still worked to project onto, especially with the lights off. 
+
+I started the first part of the assignment by setting up the boxes so that I had 7 different faces to project onto (labelled 0-6). I put sticky notes on each and wrote the code for the colors I needed. Once I had my projector callibrated and focused at the right angle to project onto the boxes, I simply went in and adjusted the orientation of each to match the faces of the boxes. This worked pretty smooth and was easy to do.
+
+![Alt text]('/Users/seanmcgahan/Documents/NYU/First Year/Fall 2026/Creative Coding/Proj. Mapping Images/Blank boxes.jpg')
