@@ -55,7 +55,34 @@ function draw() {
 
 
 if (blueSticky) {
-    filter (BLUR, 10);
+    // filter (BLUR, 10);
+
+    for (let i = 0; i < cam.pixels.length; i += 4) {
+        let red = cam.pixels[i];
+        let green = cam.pixels[i + 1];
+        let blue = cam.pixels[i + 2];
+
+    let brightness = (red + green + blue) / 3;
+
+    if (brightness < 35) {
+        cam.pixels[i] = 255;
+        cam.pixels[i + 1] = 0;
+        cam.pixels[i + 2] = 0;
+    }
+
+    if (brightness >= 35) {
+        cam.pixels[i] = 0;
+        cam.pixels[i + 1] = 0;
+        cam.pixels[i + 2] = 0;
+    }
+
+    }
+    cam.updatePixels();
+    image(cam, 0, 0, width, height);
+
+    filter();
+
+
 
 }
 }
