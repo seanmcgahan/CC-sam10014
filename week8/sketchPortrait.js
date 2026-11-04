@@ -1,8 +1,10 @@
 let cam;
 
-let trackColor;
+let trackColor; // tracking for blue sticky note
 
-let worldRecord = 20
+let trackColor2; // tracking for pink sticky note
+
+let worldRecord = 20 // threshold for color distance match
 
 async function setup() {
     createCanvas(800, 600);
@@ -15,7 +17,8 @@ async function setup() {
     fill(0);
 
    // track for color here:
-    trackColor = [101, 179, 180];
+    trackColor = [101, 179, 180]; // the specifc rgb value of my blue sticky note
+    trackColor2 = [249, 132, 157]; // the specifc rgb value of my pink sticky note
 
 }
 
@@ -26,8 +29,9 @@ function draw() {
     cam.loadPixels();
 
     let blueSticky = false;
+    let pinkSticky = false;
 
-    // xy coordinate of closent color
+    // xy coordinate of closest color (followed the code from recording in class to build out this basic logic)
     let closestX = 0;
     let closestY = 0;
 
@@ -41,21 +45,30 @@ function draw() {
         let g1 = cam.pixels[loc + 1];
         let b1 = cam.pixels[loc + 2];
 
+        // for blue sticky note
         let r2 = trackColor[0];
         let g2 = trackColor[1];
         let b2 = trackColor[2];
 
-        let d = dist(r1, g1, b1, r2, g2, b2);
+        // for pink sticky note
+        let r3 = trackColor2[0];
+        let g3 = trackColor2[1];
+        let b3 = trackColor2[2];
+
+        let d = dist(r1, g1, b1, r2, g2, b2); // blue sticky note
+        let d2 = dist(r1, g1, b1, r3, g3, b3); // pink sticky note
 
         if (d < worldRecord) {
             blueSticky = true;
+        }
+        if (d2 < worldRecord) {
+            pinkSticky = true;
         }
     }
 }
 
 
 if (blueSticky) {
-    // filter (BLUR, 10);
 
     for (let i = 0; i < cam.pixels.length; i += 4) {
         let red = cam.pixels[i];
@@ -80,17 +93,31 @@ if (blueSticky) {
     cam.updatePixels();
     image(cam, 0, 0, width, height);
 
-    filter();
+    // filter();
+}
 
 
+if (pinkSticky) {
+    for (let i = 0; i < cam.pixels.length; i += 4) {
+        let red = cam.pixels[i];
+        let green = cam.pixels[i + 1];
+        let blue = cam.pixels[i + 2];
 
+        let brightness = (red + green + blue) / 3;
+
+        if (brightness < 35) {
+            cam.pixels[i] = 0;
+            cam.pixels[i + 1] = 0;
+            cam.pixels[i + 2] = 255;
+        }
+
+        if (brightness >= 35) {
+            cam.pixels[i] = 255;
+            cam.pixels[i + 1] = 255;
+            cam.pixels[i + 2] = 255;
+        }
+    }
+    cam.updatePixels();
+    image(cam, 0, 0, width, height);
 }
 }
-// if (worldRecord < 50) {
-//     filter(BLUR, 10);
-// }
-
-// function mousePressed() {
-//     trackColor = cam.get(mouseX, mouseY);
-//     console.log(trackColor);
-// }
