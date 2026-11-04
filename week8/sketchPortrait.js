@@ -77,8 +77,10 @@ if (blueSticky) {
 
     let brightness = (red + green + blue) / 3;
 
+
+    // make screen black with red details in the shadows
     if (brightness < 35) {
-        cam.pixels[i] = 255;
+        cam.pixels[i] = 255; // red in shadows
         cam.pixels[i + 1] = 0;
         cam.pixels[i + 2] = 0;
     }
@@ -105,10 +107,12 @@ if (pinkSticky) {
 
         let brightness = (red + green + blue) / 3;
 
+
+        // make screen white with blue details in the shadows
         if (brightness < 35) {
             cam.pixels[i] = 0;
             cam.pixels[i + 1] = 0;
-            cam.pixels[i + 2] = 255;
+            cam.pixels[i + 2] = 255; // blue in shadows
         }
 
         if (brightness >= 35) {
