@@ -68,6 +68,10 @@ async function setup() {
         square.push(new Square(random(10, 50)));
     }
         
+// html text
+instructions = createP('Use your index finger to navigate through the gates and avoid the squares!');
+instructions.position(358, 690);
+
 // ml set up
     handPose = await ml5.handPose({ flipped: true });
 
