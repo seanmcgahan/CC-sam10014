@@ -1,25 +1,11 @@
 # week9
 
-## Getting Started
+## Reflection
 
-Open `index.html` in your web browser and start editing `sketch.js`.
+I had a lot of different ideas for what to do with the ml5.js tools we learned last class. Each model was pretty different in what it allowed you to do, and I wasn't sure what I wanted to make. What I can say for sure is that what I ended up making is not what I originally thought I was going to do. My intial ideas was to use the body pose or face pose and try to create some kind of character than could be controlled with the body. I tried to use the body pose first, as it seemed the most simple. I also liked that it could see the whole body, I thought it could be cool to trakc different things onto different body parts. I ran some tests with this, but found I had to put my laptop really far away from me to fit my full body in. I tried to put the laptop sideways as well to make a pseudo vertical camera (which would give me more vertical headroom) but that seemed to mess up how the machine learning models track. I decided to ditch this idea and stick with ones that would work from a laptop's normal position. 
 
-## Running Locally
+After messing around with the face mesh model, I began to use the hand pose one, which is the one I was initially less interested in. I found it was cool to control different points on the screen with some hand gestures, and thought it could be cool to make a game with this. I initially was going to make my game's controls be made by touching fingers together. I got this working, but found it to be a little limiting in optionality. I had it set up so when my index and thumb touched, a ball moved up the Y axis, and when the middle finger and thumb touched, the ball moved down the Y axis. I was going to make a game with this where the player needs to dodge obstacles by moving up or down. I think this still has potential, but would need to make the controls a little more dynamic. 
 
-For projects with media files, use a local server:
+I ended up making a game similarly where the player needs to dodge obstacles, but instead the x and y position of the player are controlled by the position of their pointer finger. This felt much more natural to do, and made for a pretty intuitive playing experience. I added two types of obstacles, gates and floating squares coming across the screen. I added collisions so that the game ends when the player hits another object. I think it makes for a pretty fun playing experience. 
 
-```bash
-# Using Python
-python -m http.server 8000
-
-# Using Node.js
-npx http-server
-
-# Using VS Code Live Server extension
-# Right-click index.html -> "Open with Live Server"
-```
-
-## Resources
-
-- [p5.js 2.0](https://beta.p5js.org/)
-- [p5.js Reference](https://p5js.org/reference/)
+Playing this with just a mouse wouldn't be too interersting, but controlling the player position with your pointer finger actually makes for a really cool experience that I haven't had before. I would still like to maybe build more functionality into the game, such as a cooldown timer once the game starts, but I think the basic playing dynamics are really cool. I keep thinking of different versions of simple games that could be made by controlling with hand gestures. It's pretty exciting stuff and it opens up a lot of doors for further exploration.
