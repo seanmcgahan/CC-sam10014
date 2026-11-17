@@ -166,9 +166,6 @@ function draw() {
             }
         }
     }
-
-// bass synth
-
   
     image(video, 0, 0, width, height);
         
