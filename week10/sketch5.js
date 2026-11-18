@@ -59,7 +59,7 @@ let env1;
 let env2;
 
 
-// used some explanation from the LLM to get this part of the code to work
+// needed help and explanation from the LLM to get this part of the code to work. Want to have this 16 x 4 grid be turned on and off by clicking
 // I think I made this a pretty inconvenient way, I focused on making a grid first and needed help from there. I looked at other step sequencers people have made and most are simpler
 let instrumentGrid = [
     [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
@@ -146,7 +146,7 @@ function draw() {
     bpmText.html(bpm);
     stepInterval = (60 / bpm) * 500;
 
-
+// this part also I had a lot of trouble with, I needed help from the LLM again to get this part to work. I had it break it down into steps of what to do. Got it working but dont fully understand it yet
     if (isPlaying) {
         if (millis() - lastStepTime >= stepInterval) {
             lastStepTime = millis();
