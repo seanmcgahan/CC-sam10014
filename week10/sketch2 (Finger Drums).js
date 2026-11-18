@@ -224,7 +224,7 @@ function draw() {
        line(width / 2, 0, width / 2, height);
        pop();
 
-// text to show which side is which instrument
+// text to show which side is which instrument + which fingers to use
     push();
     textSize(15);
     fill(0, 0, 100);
