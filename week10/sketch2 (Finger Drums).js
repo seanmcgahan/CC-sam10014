@@ -17,7 +17,7 @@ let isHiHatPinched = [false, false];
 let isCowBellPinched = [false, false];
 let isPercussion6Pinched = [false, false];
 
-//visuals
+// rectangle visuals
 let RightColor = 0;
 let LeftColor = 180;
 let showRectangle1 = false;
@@ -26,6 +26,9 @@ let showRectangle3 = false;
 let showRectangle4 = false;
 let showRectangle5 = false;
 let showRectangle6 = false;
+
+// fft
+let fft;
 
 async function setup() {
     createCanvas(800, 600);
@@ -49,7 +52,14 @@ async function setup() {
     cowBell.amp(.8);
     percussion6.amp(.6);
     
-    // visuals
+    // fft visuals
+    fft = new p5.FFT(32);
+    kick.connect(fft);
+    snare.connect(fft);
+    cymbal.connect(fft);
+    hiHat.connect(fft);
+    cowBell.connect(fft);
+    percussion6.connect(fft);
 }
 // fill right half of screen with rectangle
 function drawRightHalfRect() {
@@ -60,7 +70,7 @@ function drawRightHalfRect() {
     rect(width / 2, 0, width / 2, height);
     pop();
 }
-
+// fill left half of screen with rectangle
 function drawLeftHalfRect() {
     push();
     colorMode(HSB);
@@ -92,7 +102,7 @@ function draw() {
         let ringY = hands[i].ring_finger_tip.y;
 
 
-        
+        // play drum samples when fingers touch together
             // if pointer + thumb touch on right half of screen
             if(dist(fingerX, fingerY, thumbX, thumbY)<20 && fingerX > width / 2){
                 showRectangle1 = true;
@@ -159,7 +169,7 @@ function draw() {
                 isPercussion6Pinched[i] = false;
             }
             
-            
+    // coloring the screen when a certain side is pinched on        
     }
     if (showRectangle1) {
         RightColor = 0;
@@ -186,11 +196,48 @@ function draw() {
         drawRightHalfRect();
     }
 
+    //fft visualizer
+    let spectrum = fft.analyze();
+    // splitting into different bands to get a detailed visual effect. Used some trial and error to see what would look detailed enough
+    let bands = [
+        energy(spectrum, 20, 200),
+        energy(spectrum, 200, 400),
+        energy(spectrum, 400, 800),
+        energy(spectrum, 800, 1000),
+        energy(spectrum, 1000, 1500),
+        energy(spectrum, 1500, 2000),
+        energy(spectrum, 2500, 3000),
+        energy(spectrum, 3000, 3500),
+        energy(spectrum, 3500, 4000),
+    ]
+      for (let i = 0; i < bands.length; i++) {
+    strokeWeight(1);
+    stroke(255);
+    fill(i*180/bands.length, 100, 100, 5);
+    circle(width/2, height / 2, map(bands[i], 0, 1, 1, 900));
+    }
+    
     // line splitting screen
        push();
        strokeWeight(4);
+       stroke(0, 0, 0);
        line(width / 2, 0, width / 2, height);
        pop();
+
+// text to show which side is which instrument
+    push();
+    textSize(15);
+    fill(0, 0, 100);
+    noStroke();
+    textAlign(CENTER, CENTER);
+    text("Thumb + Index = Kick", 600, 20);
+    text("Thumb + Index = Snare", 200, 20);
+    text("Thumb + Middle = Crash", 200, 40);
+    text("Thumb + Middle = Hi-Hat", 600, 40);
+    text("Thumb + Ring = Cowbell", 200, 60);
+    text("Thumb + Ring = Cymbal bell", 600, 60);
+    pop();
+
 }
         
 
@@ -201,3 +248,13 @@ function gotHands(results) {
     hands = results;
 }
 
+// energy function from class code
+function energy(spectrum, lowHz, highHz) {
+  let nyquist = getAudioContext().sampleRate / 2;
+  let lo = floor(lowHz / nyquist * spectrum.length);
+  let hi = min(spectrum.length - 1, ceil(highHz / nyquist * spectrum.length));
+  let sum = 0;
+  for (let i = lo; i <= hi; i++) sum += spectrum[i];
+  let avg = sum / (hi - lo + 1);
+  return constrain(map(20 * Math.log10(avg + 1e-6), -100, -10, 0, 1), 0, 1);
+}
