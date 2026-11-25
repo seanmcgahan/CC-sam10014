@@ -66,12 +66,12 @@ async function setup() {
   console.log('Queens:', queens);
   console.log('Staten Island:', statenIsland);
 
-// scaled lengths based on toilet counts`
-let bronxLength = bronx * 2;
-let brooklynLength = brooklyn * 2;
-let manhattanLength = manhattan * 2;
-let queensLength = queens * 2;
-let statenIslandLength = statenIsland * 2;
+// // scaled lengths based on toilet counts`
+// let bronxLength = bronx * 1;
+// let brooklynLength = brooklyn * 1;
+// let manhattanLength = manhattan * 1;
+// let queensLength = queens * 1;
+// let statenIslandLength = statenIsland * 1;
 
 }
 
@@ -132,13 +132,20 @@ function draw() {
   strokeWeight(3);
   line(30, 160, 30, 600);
   // mark at 25% of the way down
-  line(30, 270, 40, 270);
+  line(30, 265, 40, 265);
   // mark at 50% of the way down
-  line(30, 380, 40, 380);
+  line(30, 375, 40, 375);
   // mark at 75% of the way down
-  line(30, 490, 40, 490);
+  line(30, 485, 40, 485);
   // mark at 100% of the way down
-  line(30, 598.5, 40, 598.5);
+  line(30, 580, 40, 580);
+  pop();
+
+   // line at 0
+  push();
+  stroke(255);
+  strokeWeight(3);
+  line(30, 160, 40, 160);
   pop();
 
   //text
@@ -147,11 +154,11 @@ function draw() {
   strokeWeight(0);
   textAlign(RIGHT);
   textFont('courier');
-  text('0', 25, 165);
-  text('50', 25, 275);
-  text('100', 25, 385);
-  text('150', 25, 495);
-  text('200', 25, 598);
+  text('0', 25, 155);
+  text('50', 25, 265);
+  text('100', 25, 375);
+  text('150', 25, 485);
+  text('200', 25, 580);
   pop();
 
 
@@ -187,10 +194,11 @@ function draw() {
   text(statenIsland, 700, statenIslandNumberY);
   pop();
 
+  
 }
 
 function mousePressed() {
-    // scale up to fit page
+    // scale up to fit page better
 let bronxLength = bronx * 2;
 let brooklynLength = brooklyn * 2;
 let manhattanLength = manhattan * 2;
@@ -208,7 +216,7 @@ textSize(30);
     if (mouseX > 40 && mouseX < 160 && mouseY > 0 && mouseY < 165) {
     // move bronx paper down
         if (bronxPaperY === -70) {
-            bronxPaperY = bronxLength;
+            bronxPaperY = (-70 + bronxLength);
             bronxNumberY = 100;
         } else {
             bronxPaperY = -70;
@@ -219,7 +227,7 @@ textSize(30);
     if (mouseX > 190 && mouseX < 310 && mouseY > 0 && mouseY < 165) {
     // move brooklyn paper down
         if (brooklynPaperY === -70) {
-            brooklynPaperY = brooklynLength;
+            brooklynPaperY = (-70 + brooklynLength);
             brooklynNumberY = 100;
         } else {
             brooklynPaperY = -70;
@@ -230,7 +238,7 @@ textSize(30);
     if (mouseX > 340 && mouseX < 460 && mouseY > 0 && mouseY < 165) {
     // move manhattan paper down
         if (manhattanPaperY === -70) {
-            manhattanPaperY = manhattanLength;
+            manhattanPaperY = (-70 + manhattanLength);
             manhattanNumberY = 100;
         } else {
             manhattanPaperY = -70;
@@ -241,7 +249,7 @@ textSize(30);
     if (mouseX > 490 && mouseX < 610 && mouseY > 0 && mouseY < 165) {
     // move queens paper down
         if (queensPaperY === -70) {
-            queensPaperY = queensLength;
+            queensPaperY = (-70 + queensLength);
             queensNumberY = 100;
         } else {
             queensPaperY = -70;
@@ -252,7 +260,7 @@ textSize(30);
     if (mouseX > 640 && mouseX < 760 && mouseY > 0 && mouseY < 165) {
     // move staten island paper down
         if (statenIslandPaperY === -70) {
-            statenIslandPaperY = statenIslandLength;
+            statenIslandPaperY = (-70 + statenIslandLength);
             statenIslandNumberY = 100;
         } else {
             statenIslandPaperY = -70;
