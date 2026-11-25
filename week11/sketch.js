@@ -12,7 +12,7 @@ let manhattan = 0;
 let queens = 0;
 let statenIsland = 0;
 
-// load in photo
+// load in photos of toilet paper
 let photo;
 
 let paper;
@@ -23,6 +23,13 @@ let brooklynPaperY = -70;
 let manhattanPaperY = -70;
 let queensPaperY = -70;
 let statenIslandPaperY = -70;
+
+// number initial position
+let bronxNumberY = - 100;
+let brooklynNumberY = - 100;
+let manhattanNumberY = - 100;
+let queensNumberY = - 100;
+let statenIslandNumberY = - 100;
 
 async function setup() {
   createCanvas(800, 600);
@@ -90,14 +97,62 @@ function draw() {
   noStroke();
   rect(0, 0, width, 126);
 
+  // title
+  push();
+  fill(255);
+  textFont('courier');
+  textAlign(CENTER);
+  textSize(30);
+  text('NYC Toilets in Public Parks (By Borough)', width / 2, 32);
+  pop();
+  
+
   // name above each image
   textAlign(CENTER);
   fill(255);
-  text('Bronx', 100, 25);
-  text('Brooklyn', 250, 25);
-  text('Manhattan', 400, 25);
-  text('Queens', 550, 25);
-  text('Staten Island', 700, 25);
+  textFont('courier');
+  text('Bronx', 100, 55);
+  text('Brooklyn', 250, 55);
+  text('Manhattan', 400, 55);
+  text('Queens', 550, 55);
+  text('Staten Island', 700, 55);
+
+  // directions
+  push();
+  fill(255);
+  textFont('courier');
+  textAlign(CENTER);
+  textSize(10);
+  text('Click on each borough to reveal the number of toilets', width / 2, 595);
+  pop();
+
+  // scale
+  push();
+  stroke(255);
+  strokeWeight(3);
+  line(30, 160, 30, 600);
+  // mark at 25% of the way down
+  line(30, 270, 40, 270);
+  // mark at 50% of the way down
+  line(30, 380, 40, 380);
+  // mark at 75% of the way down
+  line(30, 490, 40, 490);
+  // mark at 100% of the way down
+  line(30, 598.5, 40, 598.5);
+  pop();
+
+  //text
+  push();
+  fill(255);
+  strokeWeight(0);
+  textAlign(RIGHT);
+  textFont('courier');
+  text('0', 25, 165);
+  text('50', 25, 275);
+  text('100', 25, 385);
+  text('150', 25, 495);
+  text('200', 25, 598);
+  pop();
 
 
   // draw the TP roll image for each borough, scaled in proportion to the num of toilets
@@ -114,22 +169,50 @@ function draw() {
   // staten island tp
   image(photo, 700, 95, 140, 140);
 
+  // number on the roll
+  push();
+  fill(0);
+  textFont('courier');
+  textAlign(CENTER);
+  textSize(30);
+  // bronx
+  text(bronx, 100, bronxNumberY);
+  // brooklyn
+  text(brooklyn, 250, brooklynNumberY);
+  // manhattan
+  text(manhattan, 400, manhattanNumberY);
+  // queens
+  text(queens, 550, queensNumberY);
+  // SI
+  text(statenIsland, 700, statenIslandNumberY);
+  pop();
+
 }
 
 function mousePressed() {
+    // scale up to fit page
 let bronxLength = bronx * 2;
 let brooklynLength = brooklyn * 2;
 let manhattanLength = manhattan * 2;
 let queensLength = queens * 2;
 let statenIslandLength = statenIsland * 2;
 
+push();
+
+fill(255);
+textFont('courier');
+textAlign(CENTER);
+textSize(30);
+
 
     if (mouseX > 40 && mouseX < 160 && mouseY > 0 && mouseY < 165) {
     // move bronx paper down
         if (bronxPaperY === -70) {
             bronxPaperY = bronxLength;
+            bronxNumberY = 100;
         } else {
             bronxPaperY = -70;
+            bronxNumberY = -100;
         }
     }
 
@@ -137,8 +220,10 @@ let statenIslandLength = statenIsland * 2;
     // move brooklyn paper down
         if (brooklynPaperY === -70) {
             brooklynPaperY = brooklynLength;
+            brooklynNumberY = 100;
         } else {
             brooklynPaperY = -70;
+            brooklynNumberY = -100;
         }
     }
 
@@ -146,8 +231,10 @@ let statenIslandLength = statenIsland * 2;
     // move manhattan paper down
         if (manhattanPaperY === -70) {
             manhattanPaperY = manhattanLength;
+            manhattanNumberY = 100;
         } else {
             manhattanPaperY = -70;
+            manhattanNumberY = -100;
         }
     }
 
@@ -155,8 +242,10 @@ let statenIslandLength = statenIsland * 2;
     // move queens paper down
         if (queensPaperY === -70) {
             queensPaperY = queensLength;
+            queensNumberY = 100;
         } else {
             queensPaperY = -70;
+            queensNumberY = -100;
         }
     }
 
@@ -164,9 +253,11 @@ let statenIslandLength = statenIsland * 2;
     // move staten island paper down
         if (statenIslandPaperY === -70) {
             statenIslandPaperY = statenIslandLength;
+            statenIslandNumberY = 100;
         } else {
             statenIslandPaperY = -70;
+            statenIslandNumberY = -100;
         }
     }
-
+pop();
 }
